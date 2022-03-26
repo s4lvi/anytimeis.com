@@ -7,6 +7,9 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
       </header>
+      <footer>
+        &copy; 2022 anytime software inc.
+      </footer>
     </div>
   );
 }
