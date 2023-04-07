@@ -1,16 +1,14 @@
-import logo from './logo512.png';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './Home';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
-      <footer>
-        &copy; 2022 anytime software inc.
-      </footer>
-    </div>
+    <Router>
+      <Routes>
+        <Route path='/' element={<Home />} />
+      </Routes>
+    </Router>
   );
 }
 
