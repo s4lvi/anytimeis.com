@@ -59,7 +59,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className="fixed w-full bg-black bg-opacity-0 transition duration-500 ease-in-out z-50"
+      className={`fixed w-full bg-black bg-opacity-0 transition duration-500 ease-in-out z-50 ${navOpacity > 0 ? 'backdrop-blur' : ''}`}
       style={{ backgroundColor: `rgba(0,0,0,${navOpacity})` }}
     >
       <div className="container mx-auto flex justify-between py-6">
