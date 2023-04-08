@@ -42,3 +42,7 @@ html {
   z-index: -1;
   pointer-events: none;
 }
+
+nav button {
+  transition: border-bottom 0.3s ease-in-out;
+}
