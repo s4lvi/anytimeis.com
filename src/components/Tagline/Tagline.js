@@ -47,15 +47,15 @@ const Tagline = () => {
       wordRef.current.style.top = '-1em';
       descriptionRef.current.style.opacity = 0;
       descriptionRef.current.style.left = '100vw';
-      //backgroundRef.current.style.opacity = 0;
+      backgroundRef.current.style.opacity = 0;
       setTimeout(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % taglines.length);
         wordRef.current.style.top = '0';
         wordRef.current.style.opacity = 1;
         descriptionRef.current.style.left = '0';
         descriptionRef.current.style.opacity = 1;
-        //backgroundRef.current.style.opacity = 0.2;
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % taglines.length);
-      }, 500);
+        backgroundRef.current.style.opacity = 0.3;
+      }, 1000);
     }, 5000);
     return () => clearInterval(timer);
   }, []);
