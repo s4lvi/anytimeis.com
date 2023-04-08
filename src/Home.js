@@ -27,10 +27,9 @@ const Home = () => {
         className="overlay"
       >
         <img
-          className="noise"
           src={noise}
           alt="noise overlay"
-          className="absolute inset-0 object-cover w-full h-full opacity-30"
+          className="noise absolute inset-0 object-cover w-full h-full opacity-30"
         />
       </div>
       <Navbar showTitle={showTitle} />
