@@ -43,19 +43,21 @@ const Tagline = () => {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      wordRef.current.style.opacity = 0;
-      wordRef.current.style.top = '-1em';
-      descriptionRef.current.style.opacity = 0;
-      descriptionRef.current.style.left = '100vw';
-      backgroundRef.current.style.opacity = 0;
+      wordRef.current.style.top = '0';
+      wordRef.current.style.opacity = 1;
+      descriptionRef.current.style.left = '0';
+      descriptionRef.current.style.opacity = 1;
+      backgroundRef.current.style.opacity = 0.3;
+      setTimeout(() => {
+        wordRef.current.style.opacity = 0;
+        wordRef.current.style.top = '-1em';
+        descriptionRef.current.style.opacity = 0;
+        descriptionRef.current.style.left = '100vw';
+        backgroundRef.current.style.opacity = 0;
+      }, 4400);
       setTimeout(() => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % taglines.length);
-        wordRef.current.style.top = '0';
-        wordRef.current.style.opacity = 1;
-        descriptionRef.current.style.left = '0';
-        descriptionRef.current.style.opacity = 1;
-        backgroundRef.current.style.opacity = 0.3;
-      }, 1000);
+      }, 4900);
     }, 5000);
     return () => clearInterval(timer);
   }, []);
